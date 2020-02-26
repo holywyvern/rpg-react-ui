@@ -1,0 +1,38 @@
+{
+  "name": "rpg-react-ui",
+  "version": "1.0.0",
+  "description": "An UI made for RPG games, using React",
+  "main": "index.js",
+  "scripts": {
+    "start": "styleguidist server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holywyvern/rpg-react-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holywyvern/rpg-react-ui/issues"
+  },
+  "homepage": "https://github.com/holywyvern/rpg-react-ui#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-styleguidist": "^10.6.2",
+    "webpack": "^4.41.6"
+  },
+  "dependencies": {
+    "emotion-theming": "^10.0.27",
+    "seamless-immutable": "^7.1.4"
+  }
+}
