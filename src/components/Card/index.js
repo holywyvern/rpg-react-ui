@@ -1,5 +1,5 @@
 import React from "react";
-import { css, jsx, cx } from "@emotion/core";
+import { css } from "@emotion/core";
 import { useTheme } from "emotion-theming";
 
 function wrapperStyle(theme) {
