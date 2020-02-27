@@ -52,14 +52,14 @@ export const lightTheme = baseTheme.merge({
     texts: {
       primary: "#884211",
       accent: "#884211",
-      positive: "#d5dec9",
-      important: "#fee7ec",
-      negative: "#e1f6f5"
+      positive: "#fdfdfd",
+      important: "#fdfdfd",
+      negative: "#fdfdfd"
     },
     borders: {
       primary: ["#b0682b", "#b38b35", "#f3ca6f"],
       accent: ["#b0682b", "#b38b35", "#b38b35"],
-      important: ["#fdae94", "#fdae94", "#fdae94"],
+      important: ["#9e371a", "#9e371a", "#9e371a"],
       positive: ["#89a074", "#517324", "#517324"],
       negative: ["#6483b5"],
       input: "#9c6a39"

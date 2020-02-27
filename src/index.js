@@ -1,5 +1,7 @@
+import Button from "./components/Button";
 import Card from "./components/Card";
+import ThemeProvider from "./components/ThemeProvider";
 
-export { lightTheme } from "./themes";
+export { baseTheme, lightTheme } from "./themes";
 
-export { Card };
+export { Button, Card, ThemeProvider };
