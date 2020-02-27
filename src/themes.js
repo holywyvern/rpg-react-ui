@@ -25,7 +25,9 @@ export const baseTheme = Immutable({
     xl: "8px"
   },
   borderRadius: {
-    xs: "8px"
+    xs: "8px",
+    sm: "12px",
+    md: "16px"
   },
   shadows: {
     xs: "2px",
@@ -50,15 +52,16 @@ export const lightTheme = baseTheme.merge({
     texts: {
       primary: "#884211",
       accent: "#884211",
-      positive: "#7c3509",
-      important: "#fd784b",
-      negative: "#91dff7"
+      positive: "#d5dec9",
+      important: "#fee7ec",
+      negative: "#e1f6f5"
     },
     borders: {
       primary: ["#b0682b", "#b38b35", "#f3ca6f"],
       accent: ["#b0682b", "#b38b35", "#b38b35"],
-      important: ["#fd784b", "#fdae94", "#fdae94"],
+      important: ["#fdae94", "#fdae94", "#fdae94"],
       positive: ["#89a074", "#517324", "#517324"],
+      negative: ["#6483b5"],
       input: "#9c6a39"
     },
     shadow: "rgba(0, 0, 0, 0.2)"

@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { useTheme } from "emotion-theming";
 
 import { wrapperStyle, middleStyle, contentStyle } from "./styles";
@@ -13,5 +15,9 @@ function Card({ children }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  children: PropTypes.node
+};
 
 export default Card;

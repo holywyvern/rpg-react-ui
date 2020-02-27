@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "emotion-theming": "^10.0.27",
+    "prop-types": "^15.7.2",
     "seamless-immutable": "^7.1.4"
   }
 }
