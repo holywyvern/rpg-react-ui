@@ -1,7 +1,9 @@
 import { css } from "@emotion/core";
+import { flexStyles } from "../../utils/flexProps";
 
-export function wrapperStyle(theme) {
+export function wrapperStyle(theme, layout) {
   return css`
+    ${flexStyles(layout)}
     border: ${theme.borders.xs} solid ${theme.colors.borders.primary[0]};
     border-radius: ${theme.borderRadius.xs};
     box-shadow: 0 ${theme.shadows.xs} 0 0 ${theme.colors.shadow};
@@ -9,8 +11,9 @@ export function wrapperStyle(theme) {
   `;
 }
 
-export function middleStyle(theme) {
+export function middleStyle(theme, layout) {
   return css`
+    ${flexStyles(layout)}
     border: ${theme.borders.xs} solid ${theme.colors.borders.primary[1]};
     border-radius: calc(${theme.borderRadius.xs} - 1px);
     box-shadow: 0px 0px 0px 1px ${theme.colors.borders.primary[0]};
@@ -24,8 +27,9 @@ export function middleStyle(theme) {
   `;
 }
 
-export function contentStyle(theme) {
+export function contentStyle(theme, layout) {
   return css`
+    ${flexStyles(layout)}
     border: ${theme.borders.md} solid ${theme.colors.borders.primary[2]};
     padding: ${theme.paddings.md};
     border-radius: calc(${theme.borderRadius.xs} - 1px);

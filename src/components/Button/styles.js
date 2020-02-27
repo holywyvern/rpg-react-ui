@@ -1,6 +1,7 @@
 import { css } from "@emotion/core";
 
 import Color from "color";
+import { flexStyles } from "../../utils/flexProps";
 
 function transparentize(color, ratio = 0.8) {
   return Color(color)
@@ -9,8 +10,9 @@ function transparentize(color, ratio = 0.8) {
     .string();
 }
 
-function baseStyle(theme) {
+function baseStyle(theme, layout) {
   return `
+    ${flexStyles(layout)}
     border: ${theme.borders.sm} solid;
     border-radius: ${theme.borderRadius.md};
     padding: ${theme.paddings.md};
@@ -33,9 +35,9 @@ function baseStyle(theme) {
 }
 
 export default {
-  positive(theme) {
+  positive(theme, layout) {
     return css`
-      ${baseStyle(theme)}
+      ${baseStyle(theme, layout)}
       border-color: ${theme.colors.borders.positive[0]};
       background: ${theme.colors.backgrounds.positive};
       color: ${theme.colors.texts.positive};
@@ -48,9 +50,9 @@ export default {
       }
     `;
   },
-  negative(theme) {
+  negative(theme, layout) {
     return css`
-      ${baseStyle(theme)}
+      ${baseStyle(theme, layout)}
       border-color: ${theme.colors.borders.negative[0]};
       background: ${theme.colors.backgrounds.negative};
       color: ${theme.colors.texts.negative};
@@ -63,9 +65,9 @@ export default {
       }      
     `;
   },
-  important(theme) {
+  important(theme, layout) {
     return css`
-      ${baseStyle(theme)}
+      ${baseStyle(theme, layout)}
       border-color: ${theme.colors.borders.important[0]};
       background: ${theme.colors.backgrounds.important};
       color: ${theme.colors.texts.important};
