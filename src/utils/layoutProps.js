@@ -13,7 +13,15 @@ export const layoutPropTypes = {
   flexGrow: PropTypes.bool,
   align: PropTypes.oneOf(["start", "end", "center", "stretch", false, null]),
   padding: PropTypes.oneOf(SIZES),
-  margin: PropTypes.oneOf(SIZES)
+  paddingTop: PropTypes.oneOf(SIZES),
+  paddingLeft: PropTypes.oneOf(SIZES),
+  paddingRight: PropTypes.oneOf(SIZES),
+  paddingDown: PropTypes.oneOf(SIZES),
+  margin: PropTypes.oneOf(SIZES),
+  marginTop: PropTypes.oneOf(SIZES),
+  marginLeft: PropTypes.oneOf(SIZES),
+  marginRight: PropTypes.oneOf(SIZES),
+  marginDown: PropTypes.oneOf(SIZES)
 };
 
 export const layoutDefaultProps = {
@@ -21,14 +29,46 @@ export const layoutDefaultProps = {
   align: null
 };
 
-export function layoutStyles(theme, { flexGrow, align, padding, margin }) {
+function flexLayouts({ flexGrow, align }) {
+  return [
+    flexGrow ? "flex: 1;" : null,
+    align ? ALIGN_SELF_STYLES[align] : null
+  ];
+}
+
+function layoutPadding(
+  theme,
+  { padding, paddingTop, paddingBottom, paddingLeft, paddingRight }
+) {
+  return [
+    padding && `padding: ${theme.paddings[padding]};`,
+    paddingTop && `padding-top: ${theme.paddings[paddingTop]};`,
+    paddingBottom && `padding-bottom: ${theme.paddings[paddingBottom]};`,
+    paddingLeft && `padding-left: ${theme.paddings[paddingLeft]};`,
+    paddingRight && `padding-right: ${theme.paddings[paddingRight]};`
+  ];
+}
+
+function layoutMargin(
+  theme,
+  { margin, marginTop, marginBottom, marginLeft, marginRight }
+) {
+  return [
+    margin && `margin: ${theme.margins[margin]};`,
+    marginTop && `margin-top: ${theme.margins[marginTop]};`,
+    marginBottom && `margin-bottom: ${theme.margins[marginBottom]};`,
+    marginLeft && `margin-left: ${theme.margins[marginLeft]};`,
+    marginRight && `margin-right: ${theme.margins[marginRight]};`
+  ];
+}
+
+export function layoutStyles(theme, layout) {
   return (
     "\n" +
     [
-      flexGrow ? "flex: 1;" : null,
-      align ? ALIGN_SELF_STYLES[align] : null,
-      padding && `padding: ${theme.paddings[padding]};`,
-      margin && `margin: ${theme.margins[padding]};`
+      ...flexLayouts(layout),
+      ...layoutPadding(theme, layout),
+      ...layoutMargin(theme, layout)
     ]
       .map(i => i)
       .join("\n")

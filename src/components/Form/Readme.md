@@ -12,8 +12,9 @@ import Label from "../Label";
       <Columns
         format={["auto", "1fr"]}
         gap="md"
-        alignItems="center"
+        alignItems="baseline"
         align="stretch"
+        paddingBottom="md"
       >
         <Label input="email">Email</Label>
         <TextInput name="email" />

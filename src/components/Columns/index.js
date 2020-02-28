@@ -14,6 +14,25 @@ function Columns({ children, ...layout }) {
 
 Columns.propTypes = {
   ...layoutPropTypes,
+  alignItems: PropTypes.oneOf([
+    "baseline",
+    "start",
+    "end",
+    "center",
+    "stretch"
+  ]),
+  justifyItems: PropTypes.oneOf([
+    "start",
+    "center",
+    "space-between",
+    "space-around",
+    "space-evenly",
+    "stretch",
+    "left",
+    "right",
+    "baseline",
+    "normal"
+  ]),
   format: PropTypes.arrayOf(PropTypes.string).isRequired,
   gap: PropTypes.oneOf(SIZES)
 };
