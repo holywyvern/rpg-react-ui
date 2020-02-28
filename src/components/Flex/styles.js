@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { flexStyles } from "../../utils/flexProps";
+import { layoutStyles } from "../../utils/layoutProps";
 
 const ALIGN_FOR = {
   start: "flex-start",
@@ -18,15 +18,12 @@ const JUSTIFY_FOR = {
   stretch: "stretch"
 };
 
-export default function styles({
-  inline,
-  column,
-  alignItems,
-  justifyItems,
-  ...layout
-}) {
+export default function styles(
+  theme,
+  { inline, column, alignItems, justifyItems, ...layout }
+) {
   return css`
-    ${flexStyles(layout)}
+    ${layoutStyles(theme, layout)}
     display: ${inline ? "inline-flex" : "flex"};
     flex-direction: ${column ? "column" : "row"};
     align-items: ${ALIGN_FOR[alignItems]};

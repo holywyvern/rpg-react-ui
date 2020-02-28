@@ -1,25 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { flexPropTypes, flexDefaultProps } from "../../utils/flexProps";
+import { layoutPropTypes, layoutDefaultProps } from "../../utils/layoutProps";
 
 import styles from "./styles";
 
-function Form({ onSubmit, children, layout }) {
+function Form({ onSubmit, children, ...layout }) {
   return (
-    <form css={theme => styles(layout)} onSubmit={onSubmit}>
+    <form css={theme => styles(theme, layout)} onSubmit={onSubmit}>
       {children}
     </form>
   );
 }
 
 Form.propTypes = {
-  ...flexPropTypes,
+  ...layoutPropTypes,
   onSubmit: PropTypes.func,
   children: PropTypes.node
 };
 
 Form.defaultProps = {
-  ...flexDefaultProps
+  ...layoutDefaultProps
 };
 
 export default Form;

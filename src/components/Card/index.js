@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useTheme } from "emotion-theming";
 
 import { wrapperStyle, middleStyle, contentStyle } from "./styles";
-import { flexPropTypes, flexDefaultProps } from "../../utils/flexProps";
+import { layoutPropTypes, layoutDefaultProps } from "../../utils/layoutProps";
 
 function Card({ children, ...layout }) {
   const theme = useTheme();
@@ -18,12 +18,12 @@ function Card({ children, ...layout }) {
 }
 
 Card.propTypes = {
-  ...flexPropTypes,
+  ...layoutPropTypes,
   children: PropTypes.node
 };
 
 Card.defaultProps = {
-  ...flexDefaultProps
+  ...layoutDefaultProps
 };
 
 export default Card;

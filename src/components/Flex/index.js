@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { flexPropTypes, flexDefaultProps } from "../../utils/flexProps";
+import { layoutPropTypes, layoutDefaultProps } from "../../utils/layoutProps";
 
 import styles from "./styles";
 
 function Flex({ children, ...layout }) {
-  return <div css={theme => styles(layout)}>{children}</div>;
+  return <div css={theme => styles(theme, layout)}>{children}</div>;
 }
 
 Flex.propTypes = {
-  ...flexPropTypes,
+  ...layoutPropTypes,
   alignItems: PropTypes.oneOf(["start", "end", "center", "stretch"]),
   justifyItems: PropTypes.oneOf([
     "start",
@@ -28,7 +28,7 @@ Flex.propTypes = {
 };
 
 Flex.defaultProps = {
-  ...flexDefaultProps,
+  ...layoutDefaultProps,
   alignItems: "start",
   justifyItems: "start",
   inline: false

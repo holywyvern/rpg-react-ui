@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import styles from "./styles";
-import { flexPropTypes, flexDefaultProps } from "../../utils/flexProps";
+import { layoutPropTypes, layoutDefaultProps } from "../../utils/layoutProps";
 
 function Button({ type, submit, children, onClick, disabled, ...layout }) {
   return (
@@ -18,7 +18,7 @@ function Button({ type, submit, children, onClick, disabled, ...layout }) {
 }
 
 Button.propTypes = {
-  ...flexPropTypes,
+  ...layoutPropTypes,
   submit: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
@@ -27,7 +27,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  ...flexDefaultProps,
+  ...layoutDefaultProps,
   submit: false,
   disabled: false,
   type: "positive"

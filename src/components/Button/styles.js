@@ -1,7 +1,7 @@
 import { css } from "@emotion/core";
 
 import Color from "color";
-import { flexStyles } from "../../utils/flexProps";
+import { layoutStyles } from "../../utils/layoutProps";
 
 function transparentize(color, ratio = 0.8) {
   return Color(color)
@@ -12,7 +12,7 @@ function transparentize(color, ratio = 0.8) {
 
 function baseStyle(theme, layout) {
   return `
-    ${flexStyles(layout)}
+    ${layoutStyles(theme, layout)}
     border: ${theme.borders.sm} solid;
     border-radius: ${theme.borderRadius.md};
     padding: ${theme.paddings.md};
