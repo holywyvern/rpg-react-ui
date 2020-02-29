@@ -50,6 +50,7 @@ export const lightTheme = baseTheme.merge({
   colors: {
     backgrounds: {
       primary: "#fff6e4",
+      secondary: "#f49c61",
       highlights: "#ffeed3",
       accent: "#ffda71",
       positive: "#92da3f",
@@ -59,6 +60,7 @@ export const lightTheme = baseTheme.merge({
     },
     texts: {
       primary: "#884211",
+      secondary: "#f8e9d7",
       accent: "#884211",
       positive: "#fdfdfd",
       important: "#fdfdfd",
@@ -67,11 +69,13 @@ export const lightTheme = baseTheme.merge({
     },
     borders: {
       primary: ["#b0682b", "#b38b35", "#f3ca6f"],
+      secondary: ["#9a3d24"],
       accent: ["#b0682b", "#b38b35", "#b38b35"],
       important: ["#9e371a", "#9e371a", "#9e371a"],
       positive: ["#89a074", "#517324", "#517324"],
       negative: ["#6483b5"],
-      input: "#9c6a39"
+      input: "#9c6a39",
+      highlights: "#feecd6"
     },
     shadow: "rgba(0, 0, 0, 0.2)"
   }

@@ -14,7 +14,7 @@ function TextInput({
   minLength,
   maxLength,
   placeholder,
-  spellcheck,
+  spellCheck,
   list,
   ...layout
 }) {
@@ -33,7 +33,7 @@ function TextInput({
       minLength={minLength}
       maxLength={maxLength}
       placeholder={placeholder}
-      spellcheck={spellcheck}
+      spellCheck={spellCheck}
     />
   );
 }
@@ -50,7 +50,7 @@ TextInput.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
-  spellcheck: PropTypes.bool,
+  spellCheck: PropTypes.bool,
   list: PropTypes.string
 };
 
@@ -59,7 +59,7 @@ TextInput.defaultProps = {
   type: "text",
   disabled: false,
   required: false,
-  spellcheck: false
+  spellCheck: false
 };
 
 export default TextInput;

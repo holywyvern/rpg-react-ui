@@ -10,6 +10,18 @@
 </Button>
 ```
 
+### Secondary Button
+
+```jsx
+<Button type="secondary">Click me</Button>
+```
+
+```jsx
+<Button type="secondary" disabled>
+  Click me
+</Button>
+```
+
 ### Important Button
 
 ```jsx
