@@ -10,18 +10,19 @@ function transparentize(color, ratio = 0.8) {
     .string();
 }
 
-export default function baseStyle(theme, layout, type) {
+export default function baseStyle(theme, { size, ...layout }, type, squared) {
   return `
     ${layoutStyles(theme, layout)}
     border: ${theme.borders.sm} solid ${theme.colors.borders[type][0]};
-    border-radius: ${theme.borderRadius.md};
-    padding: ${theme.paddings.md};
+    border-radius: ${squared ? "1px" : theme.borderRadius[size]};
+    padding: ${theme.paddings[size]};
     box-shadow: 0px 1px 0px 1px ${theme.colors.shadow};
     background: ${theme.colors.backgrounds[type]};
     color: ${theme.colors.texts[type]};    
     font-weight: bold;
     cursor: pointer;
     -webkit-text-stroke: 2px ${transparentize(theme.colors.borders[type][0])};
+    font-size: ${theme.font.sizes[size]};
 
     &:focus {
       outline: 0;

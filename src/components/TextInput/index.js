@@ -26,7 +26,7 @@ function TextInput({
       name={name}
       value={onChange && value}
       defaultValue={!onChange && value}
-      onChange={onChange}
+      onChange={onChange && (e => onChange(e.target.value))}
       disabled={disabled}
       pattern={pattern}
       required={required}

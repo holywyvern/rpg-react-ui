@@ -43,6 +43,15 @@ export const baseTheme = Immutable({
     md: "8px",
     lg: "12px",
     xl: "16px"
+  },
+  font: {
+    sizes: {
+      xs: "12px",
+      sm: "14px",
+      md: "16px",
+      lg: "24px",
+      xl: "32px"
+    }
   }
 });
 
