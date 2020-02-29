@@ -2,9 +2,12 @@
   "name": "rpg-react-ui",
   "version": "1.0.0",
   "description": "An UI made for RPG games, using React",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "styleguidist server",
+    "build": "npm run build:docs && npm run build:lib",
+    "build:docs": "styleguidist build",
+    "build:lib": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,10 +29,12 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "babel-loader": "^8.0.6",
+    "husky": "^4.2.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-styleguidist": "^10.6.2",
-    "webpack": "^4.41.6"
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "color": "^3.1.2",
