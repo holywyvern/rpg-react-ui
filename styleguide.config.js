@@ -3,7 +3,13 @@ const path = require("path");
 module.exports = {
   components: "src/components/**/index.js",
   styleguideComponents: {
-    Wrapper: path.join(__dirname, "src", "styleguide", "StyleGuideWrapper")
+    Wrapper: path.join(__dirname, "src", "styleguide", "StyleGuideWrapper"),
+    StyleGuideRenderer: path.join(
+      __dirname,
+      "src",
+      "styleguide",
+      "StyleGuideRender"
+    )
   },
   webpackConfig: {
     module: {

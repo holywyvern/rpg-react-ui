@@ -24,6 +24,8 @@ Flex.propTypes = {
     "normal"
   ]),
   children: PropTypes.node,
+  wrap: PropTypes.bool,
+  reverse: PropTypes.bool,
   inline: PropTypes.bool
 };
 
@@ -31,6 +33,8 @@ Flex.defaultProps = {
   ...layoutDefaultProps,
   alignItems: "start",
   justifyItems: "start",
+  wrap: false,
+  reverse: false,
   inline: false
 };
 

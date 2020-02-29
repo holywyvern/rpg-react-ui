@@ -20,7 +20,7 @@ const JUSTIFY_FOR = {
 
 export default function styles(
   theme,
-  { inline, column, alignItems, justifyItems, ...layout }
+  { inline, column, alignItems, justifyItems, wrap, reverse, ...layout }
 ) {
   return css`
     ${layoutStyles(theme, layout)}
@@ -28,5 +28,6 @@ export default function styles(
     flex-direction: ${column ? "column" : "row"};
     align-items: ${ALIGN_FOR[alignItems]};
     justify-content: ${JUSTIFY_FOR[justifyItems]};
+    flex-wrap: ${wrap ? (reverse ? "wrap-reverse" : "wrap") : "no-wrap"};
   `;
 }

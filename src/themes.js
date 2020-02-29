@@ -80,3 +80,38 @@ export const lightTheme = baseTheme.merge({
     shadow: "rgba(0, 0, 0, 0.2)"
   }
 });
+
+export const seaTheme = baseTheme.merge({
+  colors: {
+    backgrounds: {
+      primary: "#e2eefa",
+      secondary: "#d0d7df",
+      highlights: "#a6bed6",
+      accent: "#010080",
+      positive: "#aaccef",
+      important: "#fd784b",
+      negative: "#000040",
+      input: "#ffffff"
+    },
+    texts: {
+      primary: "#20163b",
+      secondary: "#20163b",
+      accent: "#884211",
+      positive: "#20163b",
+      important: "#fdfdfd",
+      negative: "#fdfdfd",
+      input: "#272c30"
+    },
+    borders: {
+      primary: ["#7e8b9e", "#a6bed6", "#a6bed6"],
+      secondary: ["#7c8999"],
+      accent: ["#7e8b9e", "#7f8c9c", "#7f8c9c"],
+      important: ["#9e371a", "#9e371a", "#9e371a"],
+      positive: ["#7f8c9c", "#7f8c9c", "#7f8c9c"],
+      negative: ["#6483b5"],
+      input: "#9daeb8",
+      highlights: "#657390"
+    },
+    shadow: "rgba(0, 0, 0, 0.2)"
+  }
+});
