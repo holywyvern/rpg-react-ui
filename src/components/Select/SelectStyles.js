@@ -2,12 +2,12 @@ import React, { useState, Children, cloneElement } from "react";
 import PropTypes from "prop-types";
 
 import Flex from "../Flex";
+import Modal from "../Modal";
 
 import { layoutPropTypes, layoutDefaultProps } from "../../utils/layoutProps";
 
 import {
   wrapperStyles,
-  itemStyles,
   listStyles,
   inputStyles,
   caretStyles,
@@ -42,13 +42,15 @@ function SelectStyles({
         />
         <div css={caretStyles}>{isOpen ? "▲" : "▼"}</div>
       </div>
-      <nav css={theme => itemStyles(theme, isOpen)}>
-        <ul css={listStyles}>
-          {Children.map(children, (c, i) =>
-            cloneElement(c, { selected: c.props.value === value, onChange })
-          )}
-        </ul>
-      </nav>
+      <Modal open={isOpen} onClose={() => setOpen(false)}>
+        <nav>
+          <ul css={listStyles}>
+            {Children.map(children, (c, i) =>
+              cloneElement(c, { selected: c.props.value === value, onChange })
+            )}
+          </ul>
+        </nav>
+      </Modal>
     </div>
   );
 }

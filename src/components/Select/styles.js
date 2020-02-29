@@ -9,10 +9,6 @@ export function wrapperStyles(theme, layout) {
   `;
 }
 
-export function itemStyles(theme, isOpen) {
-  return css``;
-}
-
 export function listStyles(theme) {
   return css``;
 }
@@ -39,6 +35,7 @@ export function inputStyles(theme) {
 
     &:hover {
       filter: brightness(110%);
+      cursor: pointer;
     }
 
     &:disabled {
