@@ -6,9 +6,15 @@ import Button from "../Button";
 
 import { wrapperStyles, contentStyles, closeStyles } from "./styles";
 
+const preventDefault = e => e.preventDefault();
+
 function Modal({ open, onClose, children }) {
   return (
-    <div css={theme => wrapperStyles(theme, open)}>
+    <div
+      css={theme => wrapperStyles(theme, open)}
+      onKeyPress={preventDefault}
+      onKeyDown={preventDefault}
+    >
       <div css={contentStyles}>
         <Card>{children}</Card>
         {onClose && (

@@ -5,6 +5,7 @@ import Flex from "./components/Flex";
 import Form from "./components/Form";
 import Label from "./components/Label";
 import Modal from "./components/Modal";
+import Select, { Option } from "./components/Select";
 import TextInput from "./components/TextInput";
 import ThemeProvider from "./components/ThemeProvider";
 
@@ -18,6 +19,8 @@ export {
   Form,
   Label,
   Modal,
+  Select,
+  Option,
   TextInput,
   ThemeProvider
 };

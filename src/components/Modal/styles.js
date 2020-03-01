@@ -11,19 +11,26 @@ export function wrapperStyles(theme, open) {
     background: ${theme.colors.shadow};
     align-items: center;
     justify-content: center;
+    z-index: 100;
+    overflow: hidden;
   `;
 }
 
 export function contentStyles(theme) {
   return css`
     position: relative;
+    overflow: hidden;
+    padding: ${theme.paddings.md};
+    max-width: calc(100% - ${theme.paddings.md} * 2);
+    max-height: calc(100% - ${theme.paddings.md} * 2);
+    display: flex;
   `;
 }
 
 export function closeStyles(theme) {
   return css`
     position: absolute;
-    top: -${theme.borderRadius.xs};
-    right: calc(-${theme.borderRadius.xs} / 2);
+    top: 0;
+    right: 0;
   `;
 }

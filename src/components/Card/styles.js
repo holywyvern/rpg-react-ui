@@ -8,6 +8,7 @@ export function wrapperStyle(theme, layout) {
     border-radius: ${theme.borderRadius.xs};
     box-shadow: 0 ${theme.shadows.xs} 0 0 ${theme.colors.shadow};
     background: ${theme.colors.borders.primary[0]};
+    display: flex;
   `;
 }
 
@@ -24,6 +25,7 @@ export function middleStyle(theme, layout) {
       ${theme.colors.backgrounds.primary} 1px,
       ${theme.colors.backgrounds.primary} 10px
     );
+    display: flex;
   `;
 }
 
@@ -41,5 +43,7 @@ export function contentStyle(theme, layout) {
       transparent 100%
     );
     color: ${theme.colors.texts.primary};
+    display: flex;
+    flex-direction: column;
   `;
 }

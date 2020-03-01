@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
+import Option from "./Option";
 
 import { layoutPropTypes, layoutDefaultProps } from "../../utils/layoutProps";
 
@@ -23,5 +24,7 @@ Select.propTypes = {
 Select.defaultProps = {
   ...layoutDefaultProps
 };
+
+export { Option };
 
 export default Select;

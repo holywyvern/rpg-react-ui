@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const SIZES = [null, "xs", "sm", "lg", "xl"];
+export const SIZES = [null, "xs", "sm", "md", "lg", "xl"];
 
 const ALIGN_SELF_STYLES = {
   start: "align-self: flex-start;",
@@ -73,4 +73,28 @@ export function layoutStyles(theme, layout) {
       .map(i => i)
       .join("\n")
   );
+}
+
+export function scrollbarStyles(theme) {
+  return `
+    &::-webkit-scrollbar {
+      width: 8px; /* 1px wider than Lion. */
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar:hover {
+      background-color: ${theme.colors.borders.primary[2]};
+    }
+
+    &::-webkit-scrollbar-thumb:vertical {
+      background: ${theme.colors.borders.primary[0]};
+      -webkit-border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb:vertical:active {
+      background: ${theme.colors.borders.primary[0]};
+      -webkit-border-radius: 100px;
+    }      
+  `;
 }

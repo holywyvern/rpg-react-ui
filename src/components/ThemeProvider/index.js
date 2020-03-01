@@ -10,7 +10,7 @@ function ThemeProvider({ theme, children }) {
   return (
     <EmotionThemeProvider theme={theme}>
       <>
-        <Global styles={globalStyles(theme)} />
+        <Global styles={globalStyles} />
         {children}
       </>
     </EmotionThemeProvider>
