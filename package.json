@@ -2,7 +2,7 @@
   "name": "rpg-react-ui",
   "version": "1.0.0",
   "description": "An UI made for RPG games, using React",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "styleguidist server",
     "build": "npm run build:docs && npm run build:lib",
