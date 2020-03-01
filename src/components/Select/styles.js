@@ -19,6 +19,7 @@ export function inputStyles(theme) {
     color: ${theme.colors.texts.input};
     padding: ${theme.paddings.sm} ${theme.paddings.xs};
     border-radius: ${theme.borderRadius.xxs};
+    box-shadow: 0px 1px 0px 1px ${theme.colors.shadow};
 
     &:focus {
       outline: 0;

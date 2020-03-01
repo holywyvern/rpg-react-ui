@@ -3,7 +3,7 @@ import { css } from "@emotion/core";
 import Color from "color";
 import { layoutStyles } from "../../utils/layoutProps";
 
-function transparentize(color, ratio = 0.8) {
+export function transparentize(color, ratio = 0.8) {
   return Color(color)
     .fade(ratio)
     .rgb()

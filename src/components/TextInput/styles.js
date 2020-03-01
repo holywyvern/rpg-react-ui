@@ -4,6 +4,7 @@ import { layoutStyles } from "../../utils/layoutProps";
 export default function inputStyles(theme, layout) {
   return css`
     ${layoutStyles(theme, layout)}
+    display: block;
     box-sizing: border-box;
     background: ${theme.colors.backgrounds.input};
     border: ${theme.borders.sm} solid ${theme.colors.borders.input};
@@ -11,6 +12,7 @@ export default function inputStyles(theme, layout) {
     color: ${theme.colors.texts.input};
     padding: ${theme.paddings.sm} ${theme.paddings.xs};
     border-radius: ${theme.borderRadius.xxs};
+    box-shadow: 0px 1px 0px 1px ${theme.colors.shadow};
 
     &:focus {
       outline: 0;
