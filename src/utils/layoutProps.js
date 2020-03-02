@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const SIZES = [null, "xs", "sm", "md", "lg", "xl"];
+export const SIZES = [null, "0", "xs", "sm", "md", "lg", "xl"];
 
 const ALIGN_SELF_STYLES = {
   start: "align-self: flex-start;",

@@ -5,9 +5,11 @@ import Flex from "./components/Flex";
 import Form from "./components/Form";
 import Label from "./components/Label";
 import Modal from "./components/Modal";
+import Notebook from "./components/Notebook";
 import NumberInput from "./components/NumberInput";
 import Select, { Option } from "./components/Select";
 import Range from "./components/Range";
+import Tab from "./components/Tab";
 import TextInput from "./components/TextInput";
 import ThemeProvider from "./components/ThemeProvider";
 
@@ -21,10 +23,12 @@ export {
   Form,
   Label,
   Modal,
+  Notebook,
   NumberInput,
   Select,
   Range,
   Option,
+  Tab,
   TextInput,
   ThemeProvider
 };

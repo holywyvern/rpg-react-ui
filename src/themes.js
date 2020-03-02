@@ -4,6 +4,7 @@ export const baseTheme = Immutable({
   imports: ["https://fonts.googleapis.com/css?family=Montserrat&display=swap"],
   fontFamily: "Monserrat, sans-serif",
   paddings: {
+    "0": "0",
     xs: "2px",
     sm: "4px",
     md: "8px",
@@ -11,6 +12,7 @@ export const baseTheme = Immutable({
     xl: "16px"
   },
   margins: {
+    "0": "0",
     xs: "2px",
     sm: "4px",
     md: "8px",
@@ -18,6 +20,7 @@ export const baseTheme = Immutable({
     xl: "16px"
   },
   borders: {
+    "0": "0",
     xs: "1px",
     sm: "2px",
     md: "4px",
@@ -25,12 +28,14 @@ export const baseTheme = Immutable({
     xl: "8px"
   },
   borderRadius: {
+    "0": "0",
     xxs: "4px",
     xs: "8px",
     sm: "12px",
     md: "16px"
   },
   gaps: {
+    "0": "0",
     xs: "2px",
     sm: "4px",
     md: "8px",
@@ -38,6 +43,7 @@ export const baseTheme = Immutable({
     xl: "16px"
   },
   shadows: {
+    "0": "0",
     xs: "2px",
     sm: "4px",
     md: "8px",
