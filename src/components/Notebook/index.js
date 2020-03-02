@@ -17,7 +17,7 @@ function Notebook({ children, selected, onChange, expand, ...layout }) {
   }, [selected]);
   return (
     <div css={theme => notebookStyles(theme, layout)}>
-      <Card flexGrow paddingTop="0">
+      <Card removeStripes flexGrow paddingTop="0">
         {selectedChild && selectedChild.props.children}
       </Card>
       <nav css={tabWrapperStyles}>

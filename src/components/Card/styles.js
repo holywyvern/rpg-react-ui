@@ -18,13 +18,17 @@ export function middleStyle(theme, layout) {
     border: ${theme.borders.xs} solid ${theme.colors.borders.primary[1]};
     border-radius: calc(${theme.borderRadius.xs} - 1px);
     box-shadow: 0px 0px 0px 1px ${theme.colors.borders.primary[0]};
-    background-image: repeating-linear-gradient(
+    background: ${
+      layout.removeStripes
+        ? theme.colors.backgrounds.primary
+        : `repeating-linear-gradient(
       135deg,
       ${theme.colors.backgrounds.highlights},
       ${theme.colors.backgrounds.highlights} 1px,
       ${theme.colors.backgrounds.primary} 1px,
       ${theme.colors.backgrounds.primary} 10px
-    );
+    )`
+    };
     display: flex;
   `;
 }

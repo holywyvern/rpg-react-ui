@@ -19,11 +19,13 @@ function Card({ children, ...layout }) {
 
 Card.propTypes = {
   ...layoutPropTypes,
-  children: PropTypes.node
+  children: PropTypes.node,
+  removeStripes: PropTypes.bool
 };
 
 Card.defaultProps = {
-  ...layoutDefaultProps
+  ...layoutDefaultProps,
+  removeStripes: false
 };
 
 export default Card;
