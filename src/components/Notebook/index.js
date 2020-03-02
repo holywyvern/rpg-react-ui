@@ -9,7 +9,7 @@ import {
 } from "./styles";
 import Card from "../Card";
 
-function Notebook({ children, selected, onChange, ...layout }) {
+function Notebook({ children, selected, onChange, expand, ...layout }) {
   const [index, setIndex] = useState(selected || 0);
   const selectedChild = Children.toArray(children)[index];
   useEffect(() => {
@@ -25,6 +25,7 @@ function Notebook({ children, selected, onChange, ...layout }) {
           {Children.map(children, (c, i) =>
             cloneElement(c, {
               selected: i === index,
+              expand,
               index: i,
               onChange: onChange || setIndex
             })

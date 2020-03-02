@@ -22,6 +22,7 @@ export function contentStyles(theme) {
 
 export function tabWrapperStyles(theme) {
   return css`
+    flex: 1;
     border-bottom: 0;
     display: flex;
     overflow: visible;

@@ -3,11 +3,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { tabStyles, tabContentStyles, tabMiddleStyles } from "./styles";
 
-function Tab({ label, index, selected, onChange }) {
+function Tab({ label, index, selected, expand, onChange }) {
   return (
     <li
       tabIndex={0}
-      css={theme => tabStyles(theme, selected)}
+      css={theme => tabStyles(theme, selected, expand)}
       onClick={() => onChange(index)}
     >
       <div css={theme => tabMiddleStyles(theme, selected)}>
@@ -22,11 +22,13 @@ Tab.propTypes = {
   children: PropTypes.node,
   selected: PropTypes.bool,
   onChange: PropTypes.func,
+  expand: PropTypes.bool,
   index: PropTypes.number
 };
 
 Tab.defaultProps = {
-  selected: false
+  selected: false,
+  expand: false
 };
 
 export default Tab;

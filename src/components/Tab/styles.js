@@ -1,7 +1,8 @@
 import { css } from "@emotion/core";
 
-export function tabStyles(theme, selected) {
+export function tabStyles(theme, selected, expand) {
   return css`
+    ${expand ? "flex: 1;" : ""}
     align-self: flex-end;
     border: ${theme.borders.xs} solid ${theme.colors.borders.primary[0]};
     border-bottom: 0;
@@ -63,6 +64,7 @@ export function tabContentStyles(theme, selected) {
   return css`
     flex: 1;
     display: flex;
+    justify-content: center;
     border: ${theme.borders.md} solid ${theme.colors.borders.primary[2]};
     padding: ${theme.paddings.md};
     padding-bottom: ${selected ? theme.paddings.md : "0"};
