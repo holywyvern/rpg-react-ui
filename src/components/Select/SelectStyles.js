@@ -67,7 +67,12 @@ function SelectStyles({
       </div>
       <Modal open={isOpen} onClose={() => setOpen(false)}>
         {header}
-        <SelectMenu value={value} onChange={onSelection} children={children} />
+        <SelectMenu
+          visible={isOpen}
+          value={value}
+          onChange={onSelection}
+          children={children}
+        />
         {footer}
       </Modal>
     </div>

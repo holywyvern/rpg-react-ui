@@ -1,8 +1,14 @@
-import React, { useRef, useState, Children, cloneElement } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  Children,
+  cloneElement
+} from "react";
 
 import { listStyles, listWrapperStyles } from "./styles";
 
-function SelectMenu({ value, onChange, children }) {
+function SelectMenu({ value, visible, onChange, children }) {
   const [refIndex, setRefIndex] = useState(0);
   const ref = useRef();
   const size = Children.count(children);
@@ -32,6 +38,16 @@ function SelectMenu({ value, onChange, children }) {
       }
     }
   };
+  useEffect(() => {
+    if (visible) {
+      const selectedIndex = Children.map(
+        children,
+        c => value === c.props.value
+      ).indexOf(true);
+      setIndex(selectedIndex);
+      ref.current & ref.current.focus();
+    }
+  }, [visible]);
   return (
     <nav css={listWrapperStyles}>
       <ul ref={ref} css={listStyles} tabIndex={0} onKeyDown={move}>
