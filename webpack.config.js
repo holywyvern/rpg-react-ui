@@ -8,7 +8,6 @@ module.exports = {
   externals: [nodeExternals()],
   output: {
     path: path.join(__dirname, "dist"),
-    library: "rpg-react-ui",
     libraryTarget: "commonjs"
   },
   module: {
